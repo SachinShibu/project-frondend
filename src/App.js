@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchLeave from './components/SearchLeave';
+import AddLeave from './components/AddLeave';
+import DeleteLeave from './components/DeleteLeave';
+import ViewAll from './components/ViewAll';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      
+      <Route path='/' element={<AddLeave/>}/>
+      <Route path='/search' element={<SearchLeave/>}/>
+      <Route path='/delete' element={<DeleteLeave/>}/>
+      <Route path='/viewall' element={<ViewAll/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
