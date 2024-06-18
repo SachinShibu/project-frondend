@@ -15,13 +15,7 @@ const Navbar = () => {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <Link class="nav-link active" aria-current="page" to="/">Addleave</Link>
-        </li>
-        <li class="nav-item">
           <Link class="nav-link" to="/search">Search</Link>
-        </li>
-        <li class="nav-item">
-          <Link class="nav-link" to="/delete">delete</Link>
         </li>
         <li class="nav-item">
           <Link class="nav-link" to="/viewall">View All</Link>
