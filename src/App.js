@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import SearchLeave from './components/SearchLeave';
+import SearchLeave from './components/SearchLeaveStud';
 import AddLeave from './components/StudAddLeave';
 import ViewAll from './components/ViewAll';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -10,6 +10,8 @@ import StudLogin from './components/StudLogin';
 import HodLogin from './components/HodLogin';
 import FacultyLogin from './components/FacultyLogin';
 import FacultyAddLeave from './components/FacultyAddLeave';
+import SearchLeaveStud from './components/SearchLeaveStud';
+import SearchLeaveFaculty from './components/SearchLeaveFaculty';
 
 function App() {
   return (
@@ -23,7 +25,8 @@ function App() {
       <Route path='/facultylogin' element={<FacultyLogin/>}/>
       <Route path='/studaddleave' element={<AddLeave/>}/>
       <Route path='/facultyaddleave' element={<FacultyAddLeave/>}/>
-      <Route path='/search' element={<SearchLeave/>}/>
+      <Route path='/searchleavestud' element={<SearchLeaveStud/>}/>
+      <Route path='/searchleavefaculty' element={<SearchLeaveFaculty/>}/>
       <Route path='/viewall' element={<ViewAll/>}/>
     </Routes>
     </BrowserRouter>
