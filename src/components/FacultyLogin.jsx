@@ -6,8 +6,8 @@ const FacultyLogin = () => {
 
     const [data, setData] = useState(
         {
-            "email": "",
-            "password": ""
+            "faculty_username": "",
+            "faculty_password": ""
         }
     )
 
@@ -48,11 +48,11 @@ const FacultyLogin = () => {
                                 <div className="row g-4">
                                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <label htmlFor="" className="form-label">Enter your Email</label>
-                                        <input type="text" className="form-control"name='email' value={data.email} onChange={inputHandler}/>
+                                        <input type="text" className="form-control"name="faculty_username" value={data.faculty_username} onChange={inputHandler}/>
                                     </div>
                                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <label htmlFor="" className="form-label">Enter your Password</label>
-                                        <input type="password" name="password" id="" className="form-control" value={data.password} onChange={inputHandler}/>
+                                        <input type="password" name="faculty_password" id="" className="form-control" value={data.faculty_password} onChange={inputHandler}/>
                                     </div>
                                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <center>
