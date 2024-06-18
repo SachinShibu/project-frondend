@@ -77,7 +77,7 @@ const AddLeave = () => {
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form-label">Reason For Your Leave</label>
-                                <input type="text" className="form-control" name='reasonforleave' value={data.reasonforleave} onChange={inputHandler} />
+                               <textarea name="reasonforleave" value={data.reasonforleave} onChange={inputHandler} id="" className="form-control"></textarea>
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form-label">Your Label</label>
