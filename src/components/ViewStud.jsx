@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
 
-const ViewAll = () => {
+const Viewstud = () => {
     const [data, changeData] = useState([])
     const fetchData = () => {
-        axios.get("").then(
+        axios.get("http://localhost:8080/viewStud").then(
             (response) => {
 
                 changeData(response.data)
@@ -24,13 +24,12 @@ const ViewAll = () => {
                                 <tr>
                                     <th scope="col">Name</th>
                                     <th scope="col">Batch</th>
-                                    <th scope="col">ID No</th>
                                     <th scope="col">Roll No</th>
                                     <th scope="col">Leave Started From</th>
                                     <th scope="col">Leave Ended in</th>
                                     <th scope="col">Date of Submission</th>
                                     <th scope="col">Reason For Leave</th>
-                                    <th scope="col">Label</th>
+
 
                                 </tr>
                             </thead>
@@ -40,13 +39,12 @@ const ViewAll = () => {
                                     return <tr>
                                         <th scope="row">{value.name}</th>
                                         <td>{value.batch}</td>
-                                        <td>{value.IdNo}</td>
                                         <td>{value.rollno}</td>
                                         <td>{value.Sdate}</td>
                                         <td>{value.Edate}</td>
                                         <td>{value.Tdate}</td>
                                         <td>{value.reasonforleave}</td>
-                                        <td>{value.Label}</td>
+                                        
                                     </tr>
                                 }
                             )
@@ -59,4 +57,4 @@ const ViewAll = () => {
             </div>
     )
 }
-export default ViewAll
+export default Viewstud

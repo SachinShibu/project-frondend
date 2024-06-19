@@ -22,7 +22,7 @@ const HomePage = () => {
                                 <br></br>
                                 <br></br>
 
-                                <Link class="btn btn-danger" to="/hodlogin" role="button"><h3>HOD LOGIN</h3></Link>
+                                <Link class="btn btn-danger" to="/HodSignIn" role="button"><h3>HOD LOGIN</h3></Link>
                                 <br></br>
                                 <Link class="btn btn-primary" to="/facultylogin" role="button"><h3>FACULTY LOGIN</h3></Link>
                                 <br></br>

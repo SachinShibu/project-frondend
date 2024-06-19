@@ -21,7 +21,7 @@ const StudSignup = () => {
             alert("Password and Confirm Password Missmach")
             return
         }
-        axios.post("", data)
+        axios.post("http://localhost:8080/studsignup", data)
             .then(
                 (response) => {
                     if (response.data.status == "success") {

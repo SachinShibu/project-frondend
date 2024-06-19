@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const FacultyLogin = () => {
-
+    let navigate=useNavigate()
     const [data, setData] = useState(
         {
             "faculty_username": "",
@@ -16,13 +16,19 @@ const FacultyLogin = () => {
     }
 
     const readValue = () => {
-        axios.post("", data)
+        axios.post("http://localhost:8080/facultylogin", data)
             .then(
                 (response) => {
                     if (response.data.status == "success") {
-                        alert("Login Success")
+                        navigate("/facultyaddleave")
                     } else {
-                        alert("Login Failed")
+                        if(response.data.status == "User Not Found")
+                            {
+                                alert("UserName Does Not Exists")
+                            }
+                            else{
+                                alert("Incorrect Password")
+                            }
                     }
                 }
             ).catch(
