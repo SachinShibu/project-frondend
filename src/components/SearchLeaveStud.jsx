@@ -15,7 +15,7 @@ const SearchLeaveStud = () => {
     //delete function
     const DeleteLeave = (rollno) => {
         let input = { "_id": rollno }
-        axios.post("",input).then(
+        axios.post("http://localhost:8080/searchleavestud",input).then(
             (response)=>{
                 console.log(response.data)
                 if(response.data.status=="success"){
@@ -33,7 +33,7 @@ const SearchLeaveStud = () => {
     // search button event
     const readValue = () => {
         console.log(data)
-        axios.post("", data).then(
+        axios.post("http://localhost:8080/searchleavestud", data).then(
             (response) => {
 
                 setresult(response.data)

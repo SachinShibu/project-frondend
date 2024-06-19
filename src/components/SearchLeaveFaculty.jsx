@@ -15,7 +15,7 @@ const SearchLeaveFaculty = () => {
     //delete function
     const DeleteLeave = (IdNo) => {
         let input = { "_id": IdNo }
-        axios.post("", input).then(
+        axios.post("http://localhost:8080/searchleavefaculty", input).then(
             (response) => {
                 console.log(response.data)
                 if (response.data.status == "success") {
@@ -33,7 +33,7 @@ const SearchLeaveFaculty = () => {
     // search button event
     const readValue = () => {
         console.log(data)
-        axios.post("", data).then(
+        axios.post("http://localhost:8080/searchleavefaculty", data).then(
             (response) => {
 
                 setresult(response.data)
