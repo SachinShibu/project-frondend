@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const HodLogin = () => {
+    let navigate=useNavigate()
 
     const [data, setData] = useState(
         {
@@ -16,13 +17,19 @@ const HodLogin = () => {
     }
 
     const readValue = () => {
-        axios.post("", data)
+        axios.post("http://localhost:8080/HodSignIn", data)
             .then(
                 (response) => {
                     if (response.data.status == "success") {
-                        alert("Login Success")
-                    } else {
-                        alert("Login Failed")
+                       navigate("/searchleavestud")
+                    }  else {
+                        if(response.data.status == "User Not Found")
+                            {
+                                alert("UserName Does Not Exists")
+                            }
+                            else{
+                                alert("Incorrect Password")
+                            }
                     }
                 }
             ).catch(

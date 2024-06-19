@@ -21,7 +21,10 @@ const Navbar = () => {
           <Link class="nav-link" to="/searchleavefaculty">Search_Faculty</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="/viewall">view_All</Link>
+          <Link class="nav-link" to="/viewStud">view_Student</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link" to="/viewFaculty">view_Faculty</Link>
         </li>
       </ul>
     </div>
