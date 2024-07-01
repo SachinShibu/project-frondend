@@ -12,20 +12,7 @@ const SearchLeaveFaculty = () => {
     const [result, setresult] = useState(
         []
     )
-    //delete function
-    const DeleteLeave = (IdNo) => {
-        let input = { "_id": IdNo }
-        axios.post("http://localhost:8080/searchleavefaculty", input).then(
-            (response) => {
-                console.log(response.data)
-                if (response.data.status == "success") {
-                    alert("successfully deleted")
-                } else {
-                    alert("error in deletion")
-                }
-            }
-        ).catch().finally()
-    }
+    
     //input value fetching
     const inputHandler = (event) => {
         setData({ ...data, [event.target.name]: event.target.value })
@@ -43,6 +30,20 @@ const SearchLeaveFaculty = () => {
                 console.log(error)
             }
         )
+    }
+    //delete function
+    const DeleteLeave = (IdNo) => {
+        let input = { "_id": IdNo }
+        axios.post("http://localhost:8080/deletefaculty", input).then(
+            (response) => {
+                console.log(response.data)
+                if (response.data.status == "success") {
+                    alert("successfully deleted")
+                } else {
+                    alert("error in deletion")
+                }
+            }
+        ).catch().finally()
     }
 
 
