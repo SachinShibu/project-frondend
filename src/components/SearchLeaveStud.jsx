@@ -32,8 +32,8 @@ const SearchLeaveStud = () => {
         )
     }
      //delete function
-    const DeleteLeave = (rollno) => {
-        let input = { "_id": rollno }
+    const DeleteLeave = (id) => {
+        let input = { "_id": id }
         axios.post("http://localhost:8080/deletestudent",input).then(
             (response)=>{
                 console.log(response.data)
@@ -93,7 +93,7 @@ const SearchLeaveStud = () => {
                                                 <td>{value.Tdate}</td>
                                                 <td>{value.reasonforleave}</td>
                                                 <td>{value.Label}</td>
-                                                <td><button className="btn btn-danger" onClick={()=>{DeleteLeave(value.rollno)}}>DELETE</button></td>
+                                                <td><button className="btn btn-danger" onClick={()=>{DeleteLeave(value._id)}}>DELETE</button></td>
                                             </tr>
                                         }
                                     
