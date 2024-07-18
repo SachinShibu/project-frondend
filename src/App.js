@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import AddLeave from './components/StudAddLeave';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
