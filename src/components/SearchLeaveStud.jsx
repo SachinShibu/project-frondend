@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
 
@@ -37,7 +37,7 @@ const SearchLeaveStud = () => {
         axios.post("http://localhost:8080/deletestudent",input).then(
             (response)=>{
                 console.log(response.data)
-                if(response.data.status=="success"){
+                if(response.data.status ==="success"){
                     alert("successfully deleted")
                 }else{
                     alert("error in deletion")
